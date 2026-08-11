@@ -1,1 +1,1 @@
-https://gau71.github.io/arti.github.io/
+https://gau71.github.io/gautam.github.io/
