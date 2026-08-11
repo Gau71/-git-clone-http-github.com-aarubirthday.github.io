@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday, My Specail One's! ❤️</title>
+  
+  <!-- Romantic Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #ff4b72;
+      --secondary-color: #ff85a1;
+      --bg-color: #fff0f3;
+      --text-color: #2b2d42;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    /* Floating Hearts Background Animation */
+    .heart-bg {
+      position: fixed;
+      top: -10vh;
+      font-size: 1.5rem;
+      user-select: none;
+      animation: fall 5s linear infinite;
+      z-index: 0;
+      opacity: 0.7;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+      }
+    }
+
+    /* Hero Section */
+    header {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 4rem;
+      color: var(--primary-color);
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 600px;
+    }
+
+    /* Photo Gallery Section */
+    .section-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin: 40px 0 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .photo-card {
+      background: white;
+      padding: 12px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.781);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 280px;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-8px) rotate(1deg);
+      box-shadow: 0 12px 20px rgba(255, 75, 114, 0.2);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .photo-card p {
+      margin-top: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    /* Interactive Love Letter */
+    .letter-container {
+      background: white;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      position: relative;
+      z-index: 1;
+      border: 2px dashed var(--secondary-color);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.781);
+    }
+
+    .letter-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #444;
+      text-align: left;
+    }
+
+    /* Interactive Gift Box (Extra Feature!) */
+    .gift-section {
+      margin: 50px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gift-box {
+      font-size: 5rem;
+      cursor: pointer;
+      display: inline-block;
+      transition: transform 0.2s ease;
+      animation: pulse 1.5s infinite;
+    }
+
+    .gift-box:hover {
+      transform: scale(1.15);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    .surprise-message {
+      display: none;
+      margin-top: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      display: none;
+      max-width: 450px;
+      margin: 20px auto 0;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.781);
+      background-color: transparent;
+      border: 2px solid var(--primary-color);
+    }
+
+    /* Button Styling */
+    .btn {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #d83358;
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Header -->
+  <header>
+    <h1>Happy Birthday, Arti Ma'am! 🎂✨</h1>
+    <p class="subtitle">To the most wonderful person in my world — today is all about celebrating you!</p>
+    <button class="btn" onclick="scrollToGallery()">Explore Our Memories 👇</button>
+  </header>
+
+  <!-- Photo Gallery Section -->
+  <section id="gallery-section">
+    <h2 class="section-title">Our Precious Moments 📸</h2>
+    <div class="gallery">
+      
+      <!-- Photo 1 -->
+       <div class="photo-card">
+        <img src="Screenshot_20260811_171542.jpg.jpeg" alt="Memory 3">
+        <p> Sleeps & Dreams 🌹</p>
+      </div>
+      <div class="photo-card">
+        <img src="WhatsApp Image 2026-08-11 at 7.31.58 PM.jpeg">
+        <p>Enjoy in Night✨</p>
+      </div>
+      <div class="photo-card">
+        <img src="WhatsApp Image 2026-08-11 at 8.01.33 PM.jpeg">
+        <p>Mirror Selfie 💖</p>
+      </div>
+
+      <!-- Photo 2 -->
+      
+<div class="photo-card">
+        <img src="WhatsApp Image 2026-08-11 at 7.31.58 PM(1).jpeg">
+        <p>Thanks For sorry ✨</p>
+      </div>
+      <div class="photo-card">
+        <img src="WhatsApp Image 2026-08-11 at 7.32.00 PM.jpeg">
+        <p>My favorite smile 💖</p>
+      </div>
+      
+      <div class="photo-card">
+        <img src="WhatsApp Image 2026-08-11 at 7.31.59 PM.jpeg">
+        <p> Like as a Stars ✨</p>
+      </div>
+      <!-- Photo 3 -->
+      
+
+    </div>
+  </section>
+
+  <!-- Love Letter Section -->
+  <section>
+    <h2 class="section-title">A Letter For You 💌</h2>
+    <div class="letter-container">
+      <p class="letter-text">
+        <strong>Dearest Arti✨,</strong><br/><br/>
+        Thank you for bringing so much brightness, laughter, and warmth into my life. Every day with you is a gift, but today is extra special because it’s the day the universe gave us <em>you</em>.<br/><br/>
+        May this year bring you as much joy and love as you bring to everyone around you. I can’t wait to create a million more unforgettable memories together.
+        <br/><br/>
+        With all my Wishes,<br/>
+        <strong>Your Specail one ❤️</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- Surprise Gift Extra -->
+  <section class="gift-section">
+    <h2 class="section-title">Tap Your Birthday Present! 🎁</h2>
+    <div class="gift-box" id="gift" onclick="openSurprise()">🎁</div>
+    
+    <div class="surprise-message" id="surprise">
+      <h3>🎉 Birthday Wishes & gifts! 🎉</h3>
+      <p style="margin-top: 10px;"><strong><section id="gallery-section">
+    <h2 class="section-title">Your Gifts🎁</h2>
+    <div class="gallery">
+      
+      <!-- Photo 1 -->
+      <div class="photo-card">
+        <img src="WhatsApp Image 2026-08-11 at 6.21.29 PM.jpeg">
+        <p>Study light ✨</p>
+      </div>
+
+      <!-- Photo 2 -->
+      <div class="photo-card">
+        <img src="WhatsApp Image 2026-08-11 at 5.51.22 PM.jpeg" alt="Memory 2">
+        <p>Mobileu Aessaries 💖</p>
+      </div>
+
+      <!-- Photo 3 -->
+      <div class="photo-card">
+        <img src="WhatsApp Image 2026-08-11 at 5.51.23 PM.jpeg" alt="Memory 3">
+        <p>Kurti's🌹</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Love Letter Section -->
+  <section></strong></p>
+    </div>
+  </section>
+
+  <footer>
+    Made with ❤️ just for you.
+  </footer>
+
+  <!-- JavaScript for Animations and Logic -->
+  <script>
+    // Smooth Scroll to Gallery
+    function scrollToGallery() {
+      document.getElementById('gallery-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Toggle Surprise Gift Box
+    function openSurprise() {
+      const gift = document.getElementById('gift');
+      const message = document.getElementById('surprise');
+      
+      gift.style.transform = 'scale(1.3) rotate(15deg)';
+      setTimeout(() => {
+        gift.innerHTML = '💖';
+        message.style.display = 'block';
+      }, 300);
+    }
+
+    // Create Floating Background Hearts Dynamics
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart-bg');
+      
+      const heartsList = ['❤️', '💖', '🌸', '✨', '💕'];
+      heart.innerText = heartsList[Math.floor(Math.random() * heartsList.length)];
+      
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 3 + "s"; // 3s to 6s
+      heart.style.fontSize = Math.random() * 1 + 1 + "rem";
+      
+      document.body.appendChild(heart);
+      
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
