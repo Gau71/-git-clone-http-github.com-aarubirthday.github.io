@@ -21,7 +21,7 @@
       overflow: hidden;
     }
 
-    /* Floating background hearts */
+    
     .heart {
       position: absolute;
       bottom: -100px;
@@ -42,7 +42,7 @@
       }
     }
 
-    /* Card Container */
+    
     .card {
       position: relative;
       width: 360px;
@@ -89,7 +89,7 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Interactive Button */
+    
     .btn {
       background: linear-gradient(45deg, #ff4d6d, #ff758f);
       color: white;
@@ -117,7 +117,7 @@
         color: white;
     }
 
-    /* Cake Icon Animation */
+    
     .cake-icon {
       font-size: 50px;
       margin-bottom: 15px;
@@ -134,16 +134,16 @@
 </head>
 <body>
 
-  <!-- Floating Hearts Container -->
+  
   <div id="hearts-container"></div>
 
-  <!-- Birthday Card -->
+  
   <div class="card">
     <div class="cake-icon">🎂</div>
     <h1>Happy Birthday!</h1>
     <p class="subtitle">To My Favorite Person Aaru ❤️</p>
 
-    <!-- Hidden Personal Message -->
+    
     <div class="message" id="secret-message">
       <p>
        Hey ✨ On your special day, I am very happy so i decided to give you the best suprises gift for you then i specially create this suprise only for you so please firstly do start it 💖 .
@@ -152,12 +152,12 @@
       <p><strong><button class="btn" <li><a href="arti2.html" onclick="arti2()">Let's Start 🎁  </a></li></button></strong></p>
     </div>
 
-    <!-- Action Button -->
+    
     <button class="btn" id="reveal-btn" onclick="revealWish()">Open Your Surprise 💌</button>
   </div>
 
   <script>
-    // Create floating hearts dynamically
+   
     function createHeart() {
       const heart = document.createElement('div');
       heart.classList.add('heart');
@@ -175,7 +175,7 @@
 
     setInterval(createHeart, 400);
 
-    // Reveal message and trigger effect
+    
     function revealWish() {
       const msg = document.getElementById('secret-message');
       const btn = document.getElementById('reveal-btn');
@@ -183,7 +183,7 @@
       msg.style.display = 'block';
       btn.style.display = 'none';
 
-      // Extra burst of hearts
+      
       for(let i = 0; i < 20; i++) {
         setTimeout(createHeart, i * 50);
       }

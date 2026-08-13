@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A Surprise For Arti 💝</title>
 
-  <!-- Romantic Google Fonts -->
+ 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -34,7 +34,7 @@
       background-attachment: fixed;
     }
 
-    /* ═══════════ Floating hearts & sparkles background ═══════════ */
+    
     .heart-bg {
       position: fixed;
       top: -10vh;
@@ -61,7 +61,7 @@
       50%      { opacity: 0.9; transform: scale(1.2); }
     }
 
-    /* ═══════════ Confetti canvas ═══════════ */
+   
     #confetti-canvas {
       position: fixed;
       inset: 0;
@@ -69,7 +69,7 @@
       z-index: 999;
     }
 
-    /* ═══════════ Teasing intro overlay ═══════════ */
+    
     #intro {
       position: fixed;
       inset: 0;
@@ -154,7 +154,7 @@
       100% { transform: scale(0.9); opacity: 0; }
     }
 
-    /* ═══════════ Hero ═══════════ */
+    
     header {
       min-height: 100vh;
       display: flex;
@@ -215,7 +215,7 @@
       50%      { transform: translateY(12px); opacity: 1; }
     }
 
-    /* ═══════════ Sections ═══════════ */
+    
     section { position: relative; z-index: 2; padding: 40px 16px; }
 
     .section-title {
@@ -232,7 +232,7 @@
       font-size: 1rem;
     }
 
-    /* Scroll reveal */
+    
     .reveal {
       opacity: 0;
       transform: translateY(50px) scale(0.96);
@@ -240,7 +240,7 @@
     }
     .reveal.visible { opacity: 1; transform: translateY(0) scale(1); }
 
-    /* ═══════════ Cake ═══════════ */
+    
     .cake-stage {
       max-width: 420px;
       margin: 0 auto;
@@ -339,7 +339,7 @@
       100%{ transform: scale(1); opacity: 1; }
     }
 
-    /* ═══════════ Polaroid gallery ═══════════ */
+   
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -393,7 +393,7 @@
       color: var(--ink);
     }
 
-    /* ═══════════ Envelope + letter ═══════════ */
+   
     .envelope-wrap { max-width: 640px; margin: 0 auto; }
 
     #envelope {
@@ -463,7 +463,7 @@
     }
     @keyframes blink { 50% { opacity: 0; } }
 
-    /* ═══════════ Mystery gift boxes ═══════════ */
+    
     .gift-row {
       display: flex;
       flex-wrap: wrap;
@@ -517,7 +517,7 @@
       100% { transform: scale(1) rotate(0deg); opacity: 1; }
     }
 
-    /* ═══════════ Finale ═══════════ */
+    
     .finale { padding-bottom: 90px; }
 
     .btn {
@@ -585,7 +585,7 @@
 
   <canvas id="confetti-canvas"></canvas>
 
-  <!-- ═══════════ Teasing intro ═══════════ -->
+  
   <div id="intro">
     <div class="intro-emoji" id="intro-emoji">🤫</div>
     <div class="intro-title" id="intro-title">Pssst… Arti Ma'am…</div>
@@ -594,7 +594,7 @@
     <div id="countdown"></div>
   </div>
 
-  <!-- ═══════════ Hero ═══════════ -->
+  
   <header>
     <div class="hero-crown">👑</div>
     <h1>Happy Birthday,<br/>Arti Ma'am!</h1>
@@ -603,7 +603,7 @@
     <div class="scroll-hint" onclick="document.getElementById('cake-section').scrollIntoView({behavior:'smooth'})">⌄</div>
   </header>
 
-  <!-- ═══════════ Cake ═══════════ -->
+ 
   <section id="cake-section">
     <h2 class="section-title reveal">Make a Wish 🕯️</h2>
     <p class="section-tease reveal">Tap each little flame to blow out your candles…<br/>and don't you dare tell me the wish! 🤭</p>
@@ -625,7 +625,7 @@
     </div>
   </section>
 
-  <!-- ═══════════ Memories ═══════════ -->
+  
   <section id="gallery-section">
     <h2 class="section-title reveal">Our Precious Moments 📸</h2>
     <p class="section-tease reveal">Careful — these polaroids are known to cause uncontrollable smiling. 😊</p>
@@ -659,7 +659,7 @@
     </div>
   </section>
 
-  <!-- ═══════════ Letter ═══════════ -->
+  
   <section id="letter-section">
     <h2 class="section-title reveal">A Letter For You 💌</h2>
     <p class="section-tease reveal">It's sealed with something more precious than wax… tap to open it.</p>
@@ -671,7 +671,7 @@
     </div>
   </section>
 
-  <!-- ═══════════ Mystery gifts ═══════════ -->
+ 
   <section id="gift-section">
     <h2 class="section-title reveal">Three Boxes, Three Secrets 🎁</h2>
     <p class="section-tease reveal">They've been shaking with excitement all day…<br/>tap each one to unwrap it!</p>
@@ -707,7 +707,7 @@
     </div>
   </section>
 
-  <!-- ═══════════ Finale ═══════════ -->
+  
   <section class="finale">
     <h2 class="section-title reveal">One Last Thing… 🎆</h2>
     <button class="btn reveal" onclick="grandFinale(this)">Press if you smiled today 😊</button>
@@ -722,7 +722,7 @@
   </footer>
 
   <script>
-    /* ═══════════ Confetti engine ═══════════ */
+    
     const canvas = document.getElementById('confetti-canvas');
     const ctx = canvas.getContext('2d');
     let particles = [];
@@ -762,7 +762,7 @@
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       particles = particles.filter(p => p.life > 0 && p.y < canvas.height + 40);
       for (const p of particles) {
-        p.vy += 0.18;           // gravity
+        p.vy += 0.18;          
         p.vx *= 0.99;
         p.x += p.vx;
         p.y += p.vy;
@@ -792,7 +792,7 @@
       }, 350);
     }
 
-    /* ═══════════ Teasing intro flow ═══════════ */
+    
     const teaseSteps = [
       { emoji: '🤨', title: 'Wait wait wait…', sub: 'Are you absolutely, positively, 100% sure<br/>you deserve a surprise today? 🤔', btn: 'Umm… yes?? 😅' },
       { emoji: '😏', title: 'Hmm, let me think…', sub: 'Okay… the birthday committee has reviewed your case.<br/>Verdict: <strong>officially the most special person today.</strong>', btn: 'Obviously! Now open it! 😤' },
@@ -843,7 +843,7 @@
       startAmbience();
     }
 
-    /* ═══════════ Ambient hearts, stars, balloons ═══════════ */
+    
     let ambienceStarted = false;
     function startAmbience() {
       if (ambienceStarted) return;
@@ -886,7 +886,7 @@
       });
     }
 
-    /* ═══════════ Cake candles ═══════════ */
+    
     let candlesOut = 0;
     function blowCandle(candle) {
       if (candle.classList.contains('out')) return;
@@ -902,7 +902,7 @@
       }
     }
 
-    /* ═══════════ Letter with typewriter ═══════════ */
+    
     const letterLines = [
       { text: 'Priye Sakhi Arti ✨', bold: true },
       { text: '' },
@@ -960,7 +960,7 @@
       tick();
     }
 
-    /* ═══════════ Mystery gifts ═══════════ */
+    
     function openGift(box) {
       const wrap = box.closest('.mystery');
       box.style.animation = 'none';
@@ -970,7 +970,7 @@
       setTimeout(() => wrap.classList.add('opened'), 280);
     }
 
-    /* ═══════════ Finale ═══════════ */
+   
     function grandFinale(btn) {
       btn.style.display = 'none';
       document.getElementById('finale-msg').classList.add('show');
@@ -978,7 +978,7 @@
       fireworksBurst(10);
     }
 
-    /* ═══════════ Scroll reveal ═══════════ */
+    
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
