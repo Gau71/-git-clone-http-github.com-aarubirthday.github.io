@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Birthday My Aaru! ❤️</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       min-height: 100vh;
@@ -21,7 +17,6 @@
       overflow: hidden;
     }
 
-    /* Floating background hearts */
     .heart {
       position: absolute;
       bottom: -100px;
@@ -29,20 +24,14 @@
       color: rgba(255, 255, 255, 0.7);
       animation: floatUp 8s linear infinite;
       z-index: 1;
+      pointer-events: none;
     }
 
     @keyframes floatUp {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-      }
+      0%   { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
     }
 
-    /* Card Container */
     .card {
       position: relative;
       width: 360px;
@@ -53,13 +42,6 @@
       text-align: center;
       box-shadow: 0 15px 35px rgba(230, 80, 115, 0.3);
       z-index: 10;
-      transform: scale(0.9);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(0.92);
-      box-shadow: 0 20px 40px rgba(230, 80, 115, 0.4);
     }
 
     .card h1 {
@@ -80,16 +62,9 @@
       color: #4a4a4a;
       line-height: 1.6;
       margin-bottom: 25px;
-      display: none; /* Revealed on click */
-      animation: fadeIn 1s ease forwards;
+      display: none;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Interactive Button */
     .btn {
       background: linear-gradient(45deg, #ff4d6d, #ff758f);
       color: white;
@@ -100,24 +75,15 @@
       border-radius: 50px;
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
-      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .btn:hover {
-      background: linear-gradient(45deg, #ff758f, #ff4d6d);
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6);
     }
 
-    .btn:active {
-      transform: translateY(0);
-    }
-    a{
-        text-decoration: none;
-        color: white;
-    }
-
-    /* Cake Icon Animation */
     .cake-icon {
       font-size: 50px;
       margin-bottom: 15px;
@@ -130,59 +96,58 @@
       40% { transform: translateY(-10px); }
       60% { transform: translateY(-5px); }
     }
+
+    #see-more {
+      display: none;
+      margin-top: 15px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Floating Hearts Container -->
   <div id="hearts-container"></div>
 
-  <!-- Birthday Card -->
   <div class="card">
     <div class="cake-icon">🎂</div>
     <h1>Happy Birthday!</h1>
     <p class="subtitle">To My Favorite Person Aaru ❤️</p>
 
-    <!-- Hidden Personal Message -->
     <div class="message" id="secret-message">
       <p>
         On your special day, I just want to remind you how deeply loved and cherished you are.
         Thank you for bringing so much brightness, warmth, and laughter into my life.
       </p>
-      <br>
-      <p><strong><button class="btn" <li><a href="arti2.html" onclick="arti2()">See More </a></li></button></strong></p>
     </div>
 
-    <!-- Action Button -->
+    <!-- Main button -->
     <button class="btn" id="reveal-btn" onclick="revealWish()">Open Your Surprise 💌</button>
+
+    <!-- This appears after clicking -->
+    <div id="see-more">
+      <a class="btn" href="arti2.html">See More ✨</a>
+    </div>
   </div>
 
   <script>
-    // Create floating hearts dynamically
+    // Floating hearts
     function createHeart() {
       const heart = document.createElement('div');
-      heart.classList.add('heart');
+      heart.className = 'heart';
       heart.innerHTML = '❤️';
       heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.animationDuration = Math.random() * 3 + 5 + 's';
-      heart.style.fontSize = Math.random() * 20 + 15 + 'px';
-      
+      heart.style.animationDuration = (Math.random() * 3 + 5) + 's';
+      heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
       document.getElementById('hearts-container').appendChild(heart);
-
-      setTimeout(() => {
-        heart.remove();
-      }, 8000);
+      setTimeout(() => heart.remove(), 8000);
     }
-
     setInterval(createHeart, 400);
 
-    // Reveal message and trigger effect
+    // Surprise button function
     function revealWish() {
-      const msg = document.getElementById('secret-message');
-      const btn = document.getElementById('reveal-btn');
-      
-      msg.style.display = 'block';
-      btn.style.display = 'none';
-
-      // Extra burst of hearts'}''
+      document.getElementById('secret-message').style.display = 'block';
+      document.getElementById('reveal-btn').style.display = 'none';
+      document.getElementById('see-more').style.display = 'block';
     }
+  </script>
+</body>
+</html>
